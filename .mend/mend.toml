@@ -1,0 +1,8 @@
+[service.web]
+command = "node server.mjs"
+port = 3000
+browserScheme = "http"
+ready = { http = "/login", timeout = "30s" }
+
+[preview]
+service = "web"
