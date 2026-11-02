@@ -8,7 +8,7 @@ Each copy keeps its tasks in its own `data/tasks.json`, created on first write.
 
 1. Open `http://127.0.0.1:<port>/login`.
 2. Sign in with the test account `demo@example.com` / `demo-password` (fixed test data).
-3. Observe the Task board heading and three tasks.
+3. Observe the Planning task board heading and three tasks.
 
 ## Complete a task
 

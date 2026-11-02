@@ -66,5 +66,5 @@ createServer(async (req, res) => {
 <button>${task.done ? "Undo" : "Done"}</button></form><span>${escape(task.title)}${task.done ? " (done)" : ""}</span></li>`,
     )
     .join("");
-  send(res, 200, page("Task board", `<h1>Task board</h1><ul>${items}</ul>`));
+  send(res, 200, page("Task board", `<h1>Planning task board</h1><ul>${items}</ul>`));
 }).listen(port, "0.0.0.0", () => console.log(`task board on http://127.0.0.1:${port}`));
