@@ -63,7 +63,7 @@ createServer(async (req, res) => {
   const items = load()
     .map(
       (task) => `<li><form method="post" action="/toggle"><input type="hidden" name="id" value="${task.id}">
-<button>${task.done ? "Undo" : "Done"}</button></form><span>${escape(task.title)}${task.done ? " (done)" : ""}</span></li>`,
+<button>${task.done ? "Undo" : "Done"}</button></form><span>${task.done ? `<s>${escape(task.title)}</s>` : escape(task.title)}</span></li>`,
     )
     .join("");
   send(res, 200, page("Task board", `<h1>Task board</h1><ul>${items}</ul>`));
